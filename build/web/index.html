@@ -120,6 +120,12 @@ window.onload = function () {
 </script>
 
 <script>
+function getSymbolType(callback, url) {
+	fetch(url).then(r => r.text()).then(t => callback(t));
+}
+</script>
+
+<script>
 function getFile(callback) {
 	window.input = document.createElement('input');
 	input.type = 'file';
@@ -201,7 +207,7 @@ function getFile(callback) {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":101904,"index.wasm":49219187},"focusCanvas":true,"gdextensionLibs":[]};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":121936,"index.wasm":49219187},"focusCanvas":true,"gdextensionLibs":[]};
 const engine = new Engine(GODOT_CONFIG);
 
 (function () {
