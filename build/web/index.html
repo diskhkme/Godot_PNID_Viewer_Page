@@ -130,7 +130,7 @@ function getProjectFiles(callback) {
 	window.input = document.createElement('input');
 	input.type = 'file';
 	input.multiple = 'multiple';
-	input.accept = '.png, .xml'
+	input.accept = '.png, .jpg, .jpeg, .xml'
 
 	let img_file;
 	input.onchange = e => {
@@ -139,7 +139,7 @@ function getProjectFiles(callback) {
 		var img_files = [];
 		var xml_files = [];
 		[...files].forEach(file => {
-    		if(file.name.includes(".png")) {
+    		if(file.name.includes(".png") || file.name.includes(".jpg") || file.name.includes(".jpeg")) {
         		img_files.push(file);
     		}
     		else if(file.name.includes(".xml")) {
@@ -250,7 +250,7 @@ function getXMLFiles(callback) {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":1320448,"index.wasm":35649444},"focusCanvas":true,"gdextensionLibs":[]};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":1955200,"index.wasm":35649444},"focusCanvas":true,"gdextensionLibs":[]};
 const engine = new Engine(GODOT_CONFIG);
 
 (function () {
